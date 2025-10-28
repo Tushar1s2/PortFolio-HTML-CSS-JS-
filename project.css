@@ -1,0 +1,166 @@
+body {
+    background-color: #0D1117;
+    color: #D1D5DB;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    animation: fadeIn 0.6s ease-in;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.header {
+    height: 45px;
+    width: 100%;
+    position: fixed;
+}
+
+.main {
+    padding-top: 46px;
+    min-height: calc(100vh - 60px);
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.project-heading {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.project-heading::first-letter {
+    color: #A855F7;
+
+}
+
+.outerBorder {
+    border: 2px solid #A855F7;
+    opacity: 0.7;
+    min-height: 100vh;
+    padding: 25px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    animation: glowPulse 4s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 25px rgba(168, 85, 247, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(168, 85, 247, 0.6);
+    }
+
+    100% {
+        box-shadow: 0 0 25px rgba(168, 85, 247, 0.3);
+    }
+}
+
+.mainName {
+    position: relative;
+    top: 40%;
+    left: 25px;
+    line-height: 16px;
+    font-weight: 700;
+    font-size: x-large;
+}
+
+span {
+    color: #A855F7;
+}
+
+.nav {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    margin-right: 30px;
+    gap: 40px;
+
+}
+
+.nav-options a {
+    text-decoration: none;
+    color: #D1D5DB;
+    opacity: 0.8;
+    transition: 0.3s ease;
+    font-weight: 300;
+}
+
+.nav-options a:hover {
+    opacity: 1;
+    color: #A855F7;
+}
+
+.nav-options .active {
+    color: #A855F7;
+    font-weight: bolder;
+    text-shadow: 0 0 10px #a78bfa;
+}
+
+.main .box {
+    border: 2px solid #A855F7;
+    height: 350px;
+    width: 250px;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.03);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition:0.3s;
+}
+.main .box:hover{
+    box-shadow: 0 0 40px rgba(168, 85, 247, 0.5);
+    transform: scale(1.1);
+}
+
+.box img {
+    width: 98%;
+    height: 70%;
+    object-fit: cover;
+    /* adjusts image to fill box without distortion */
+    border-radius: 40px;
+    /* matches box roundness */
+}
+
+.box h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #D1D5DB;
+    text-align: center;
+    margin: 8px 0;
+    height: 45px;
+    /* fixes uneven text height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-wrap: wrap;
+}
+
+.box button {
+    
+    background-color: #A855F7;
+    /* Purple shade */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    /* keeps text in one line */
+}
+
+.box button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px rgba(168, 85, 247, 0.6);
+    ;
+}
